@@ -55,7 +55,7 @@ endif
 export PROJ       := $(lastword $(subst /, ,${CURDIR}))
 export CFU_ROOT   := $(realpath $(CURDIR)/../..)
 export PLATFORM   ?= common_soc
-export TARGET     ?= digilent_arty
+export TARGET     ?= digilent_nexys4ddr
 export TTY        ?= $(or $(wildcard /dev/ttyUSB?), $(wildcard /dev/ttyACM?))
 
 RUN_MENU_ITEMS    ?=1 1 1
