@@ -73,6 +73,7 @@ proj/my_first_cfu
 
 # cfu.v, if present, must be added explicitly
 proj/*/cfu.v
+!proj/AAML_final_proj/cfu.v
 
 build
 csr.csv
