@@ -36,6 +36,7 @@
 *.x86_64
 *.hex
 *.bin
+!proj/AAML_final_proj/perf_samples/*bin
 
 # Debug files
 *.dSYM/
