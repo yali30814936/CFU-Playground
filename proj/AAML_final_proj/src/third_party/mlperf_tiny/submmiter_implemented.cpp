@@ -109,7 +109,7 @@ char *th_strncpy(char *dest, const char *src, size_t n) {
 
 size_t th_strnlen(const char *str, size_t maxlen) {
   size_t i = 0;
-  while(str[i] != '\0' || i < maxlen){
+  while(str[i] != '\0' && i < maxlen){
     i++;
   }
   return i;
@@ -152,7 +152,7 @@ void th_timestamp(void) {
  #else
   unsigned long microSeconds = 0ul;
   /* USER CODE 2 BEGIN */
-  microSeconds = perf_get_mcycle();
+  microSeconds = static_cast<unsigned long>(perf_get_mcycle64()/75);
   /* USER CODE 2 END */
   /* This message must NOT be changed. */
   th_printf(EE_MSG_TIMESTAMP, microSeconds);
