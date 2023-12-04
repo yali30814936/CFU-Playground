@@ -41,8 +41,9 @@ if __name__ == '__main__':
     )
     if com.is_open:
         com.write("xxxxxxxx30%".encode())
+        output = com.read_until(READY_MSG.encode()).decode()
         time.sleep(0.5)
-        com.read_all()
+        output = com.read_all().decode()
         com.write("name%".encode())
         output = com.read_until(READY_MSG.encode()).decode()
         student_ID = re.search("m-name-dut-\\[(NYCU-CAS-LAB)\\]", output).group(1)
